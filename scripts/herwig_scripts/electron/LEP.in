@@ -1,0 +1,47 @@
+# -*- ThePEG-repository -*-
+
+##################################################
+# Example generator based on LEP parameters
+# usage: Herwig read LEP.in
+##################################################
+
+read snippets/EECollider.in
+# switch off ISR
+set /Herwig/Particles/e+:PDF /Herwig/Partons/NoPDF
+set /Herwig/Particles/e-:PDF /Herwig/Partons/NoPDF
+
+##################################################
+# Selected the hard process 
+##################################################
+cd /Herwig/MatrixElements
+# default e+e- > q qbar (5 flavours d,u,s,c,b)
+# insert SubProcess:MatrixElements 0 MEee2gZ2qq
+# set MEee2gZ2qq:MinimumFlavour 1
+# set MEee2gZ2qq:MaximumFlavour 1
+# e+e- > l+l-
+insert SubProcess:MatrixElements[0] MEee2gZ2ll
+set MEee2gZ2ll:Allowed Electron
+# e+e- > W+W- ZZ
+# insert SubProcess:MatrixElements[0] MEee2VV
+# higgs+Z
+# insert SubProcess:MatrixElements[0] MEee2ZH
+# higgs+e+e-/nu_enu_ebar via VBF
+# insert SubProcess:MatrixElements[0] MEee2HiggsVBF
+
+##################################################
+# LEP physics parameters (override defaults) 
+##################################################
+cd /Herwig/Generators
+set EventGenerator:EventHandler:LuminosityFunction:Energy %
+##################################################
+# set up rivet
+##################################################
+create ThePEG::RivetAnalysis /Herwig/Analysis/Rivet RivetAnalysis.so
+insert EventGenerator:AnalysisHandlers 0 /Herwig/Analysis/Rivet
+insert /Herwig/Analysis/Rivet:Analyses 0 BH_TABLE_GENERATOR
+cd /Herwig/Generators
+
+###################################################
+# Save run for later usage with 'Herwig run'
+##################################################
+saverun LEP EventGenerator
