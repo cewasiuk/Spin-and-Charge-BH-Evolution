@@ -1,0 +1,2 @@
+write_secondary_photon		=	1
+write_secondary_electron	=	1

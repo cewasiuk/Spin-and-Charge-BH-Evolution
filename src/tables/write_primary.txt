@@ -1,0 +1,17 @@
+write_primary_photon 	= 	1
+write_primary_gluon 	= 	1
+write_primary_higgs 	= 	1
+write_primary_W+-		=	1
+write_primary_Z0		=	1
+write_primary_neutrino	=	1
+write_primary_electron	=	1
+write_primary_muon		=	1
+write_primary_tau		=	1
+write_primary_up		=	1
+write_primary_down		=	1
+write_primary_charm		=	1
+write_primary_strange	=	1
+write_primary_top		=	1
+write_primary_bottom	=	1
+write_primary_graviton	=	1
+write_primary_DM 		= 	1

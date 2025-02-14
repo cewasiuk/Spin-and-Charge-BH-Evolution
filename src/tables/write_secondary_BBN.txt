@@ -1,0 +1,11 @@
+write_secondary_photon		=	1
+write_secondary_electron	=	1
+write_secondary_muon		=	1
+write_secondary_nue			=	1
+write_secondary_numu		=	1
+write_secondary_nutau		=	1
+write_secondary_pi+-		=	1
+write_secondary_K0L			=	1
+write_secondary_K+-			=	1
+write_secondary_proton		=	1
+write_secondary_neutron		=	1
