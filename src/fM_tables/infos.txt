@@ -1,5 +1,0 @@
-Mmin_fM = 2.177e-5								# BH minimal mass used to compute the f(M,a) and g(M,a) table (DO NOT MODIFY)
-Mmax_fM =     1.00000e+65							# BH maximal mass used to compute the f(M,a) and g(M,a) table (DO NOT MODIFY)
-nb_fM_masses = 1000								# number of BH masses tabulated in f(M,a) and g(M,a) (DO NOT MODIFY)
-nb_fM_a = 50									# number of BH spins tabulated in f(M,a) and g(M,a) (DO NOT MODIFY)
-nb_fM_epsilon = 11								# number of BH epsilon LQG parameters tabulated in f(M,epsilon) (DO NOT MODIFY)
