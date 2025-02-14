@@ -1,0 +1,18 @@
+output = test										# name of the output file
+path = ../../ 										# path to the BlackHawk version
+sessions = 2 										# 0: instantaneous only, 1: time-dependent only, 2: both
+local_DM_GeV = 0.43									# DM local density in GeV/cm^3 (arXiv:1212.3670)
+global_DM = 2.24e-30 								# DM global density in g/cm^3 (Planck results 2018 Omega_DM*h**2 = 0.12 and h = 0.674)
+r_0 = 8.122											# distance Sun-GC in kpc
+profile = 0 										# density profile of the galaxy, 0: generalized NFW, 1: Einasto
+rho_c_halo = 5.350023093424651e-25					# characteristic halo density in g/cm^3
+r_c_halo = 9.2										# characteristic halo radius in kpc
+gamma_halo = 0.18									# density profile inner slope
+t_eq = 1.577e+12 									# matter-radiation equality in s
+t_CMB = 1.198e+13									# CMB last scattering surface in s
+t_today = 4.352e+17				 					# age of the universe in s
+domination = 0										# redshift history, 0: standard redshift history, 1: radiation domination, 2: matter domination
+energy_method = 0									# statistical sub-method, 0: full energy range, 1: binned energy range
+background_type = 0									# background choice, 0: gal+egal arXiv:2010.04797, 1: gal+egal arXiv:2110.03333, 2: gal arXiv:1101.1381 and egal arXiv:1906.04750
+confidence_level = 0								# number of error bars admitted in the comparison (data + confidence_level*error_bar)
+signal_to_noise_ratio = 5.							# signal to noise ratio for prospective instruments

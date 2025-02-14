@@ -1,0 +1,59 @@
+destination_folder = &							# name of the output folder in results/
+full_output = &									# quantity of information displayed (0=less, 1=more)
+interpolation_method = &						# interpolation in the numerical tables (0=linear, 1=logarithmic)
+
+metric = &										# BH metric: 0=Kerr, 1=polymerized, 2=charged, 3=higher-dimensional
+
+BH_number = &									# number of BH masses (should be the number of tabulated masses if spectrum_choice=5)
+Mmin = &										# lowest BH mass in g (larger than the Planck mass)
+Mmax = &										# highest BH mass in g (larger than the Planck mass)
+param_number = &								# number of Kerr spins
+amin = &										# lowest Kerr spin
+amax = &										# highest Kerr spin
+Qmin = &										# lowest Reissner-Norström charge
+Qmax = &										# highest Reissner-Norström charge
+
+epsilon_LQG = &									# dimensionless epsilon parameter for the polymerized metric
+a0_LQG = &										# minimal area for the polymerized metric in GeV^(-2)
+n = &											# number of extra spatial dimensions in higher-dimensional metric
+
+spectrum_choice = &								# form of the BH distribution: 0=Dirac, 1=log-normal for the mass, 11: log-normal for the number, 2=power-law, 3=critical collapse, 4=peak theory, 5=uniform -1=user-defined
+spectrum_choice_param = &						# form of the spin dsitribution for each mass: 0=Dirac, 1=uniform, 2=Gaussian
+
+amplitude_lognormal = &							# amplitude of the log-normal (mass density) distribution in g.cm^-3
+amplitude_lognormal2 = &						# amplitude of the log-normal (number density) distribution in cm^-3
+stand_dev_lognormal = &							# dimensionless variance of the log-normal distribution 
+crit_mass_lognormal = &							# characteristic mass of the log-normal distribution in g
+
+amplitude_powerlaw = &							# amplitude of the power-law distribution in g^(gamma-1).cm^-3
+eqstate_powerlaw = &							# equation of state of the Universe at the BH formation time P = w.rho
+
+amplitude_critical_collapse = &					# amplitude of the critical collapse distribution in g^(-2.85).cm^-3
+crit_mass_critical_collapse = &					# characteristic mass of the critical collapse distribution in g
+
+amplitude_uniform = &							# amplitude of the uniform mass distribution in cm^(-3)
+
+stand_dev_param_Gaussian = &					# standard deviation of the Gaussian spin distribution
+mean_param_Gaussian = &							# mean of the Gaussian spin distribution
+
+table = &										# table containing the User's BH distribution
+
+tmin_manual = &									# 1: user-defined tmin, 0:automatically set tmin
+tmin = &										# initial integration time of the evolution of BH in s
+limit = &										# iteration limit when computing the time evolution of a single BH
+BH_remnant = &									# 0: total evaporation, 1: BH relic at mass M_relic
+M_remnant = &									# BH relic mass in g
+
+E_number = &									# number of primary particles energies to be simulated
+Emin = &										# minimal energy in GeV of the primary particles
+Emax = &										# maximal energy in GeV of the primary particles
+
+grav = &										# 0=no graviton, 1=emission of gravitons
+add_DM = &										# 0=no DM added, 1=one DM particle
+m_DM = &										# DM mass in GeV
+spin_DM = &										# DM spin
+dof_DM = &										# number of DM degrees of freedom
+
+primary_only = &								# 1=no secondary spectrum, 0=secondary spectrum computed
+
+hadronization_choice = &						# 0=PYTHIA at the BBN epoch, 1=HERWIG at the BBN epoch, 2=PYTHIA (new) at the present epoch, 3=HAZMA at the present epoch
